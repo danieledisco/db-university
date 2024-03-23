@@ -16,51 +16,51 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
  ## Progetto del db
 
  ### dipartimenti
- id
- nome_dipartimento
- descrizione_dipartimento
- direttore_dipartimento
- budget
+  - id
+  - nome_dipartimento
+  - descrizione_dipartimento
+  - direttore_dipartimento
+  - budget
 
  ### corsi_laurea
- id
- nome_corso_laurea
- descrizione_corso_laurea
- presidente_corso_laurea
- id_dipartimento
+  - id
+  - nome_corso_laurea
+  - descrizione_corso_laurea
+  - presidente_corso_laurea
+  - id_dipartimento
 
  ### materie
- id
- name_materia
- programma
- preside
- testo_riferimento
- id_corso_laurea
+  - id
+  - name_materia
+  - programma
+  - preside
+  - testo_riferimento
+  - id_corso_laurea
  
  ### professori
- id
- name
- cognome
- anni_insegnamento
- ruolo (docente assistente)
- id_materia
+  - id
+  - name
+  - cognome
+  - anni_insegnamento
+  - ruolo (docente assistente)
+  - id_materia
 
  ### appelli_esame
- id
- data
- ora
- aula
- id_materia
+  - id
+  - data
+  - ora
+  - aula
+  - id_materia
 
  ### studente
- id
- nome
- cognome
- id_corso_laurea
- id_appello_esame
+  - id
+  - nome
+  - cognome
+  - id_corso_laurea
+  - id_appello_esame
 
  ### voti
- id
- id_studente
- id_appello_esame
- voto
+  - id
+  - id_studente
+  - id_appello_esame
+  - voto
