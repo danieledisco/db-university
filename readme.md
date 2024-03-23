@@ -52,7 +52,7 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
   - aula
   - id_materia
 
- ### studente
+ ### studenti
   - id
   - nome
   - cognome
