@@ -17,53 +17,53 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
  ## Progetto del db
 
  ### dipartimenti
-  - id
-  - nome_dipartimento
-  - descrizione_dipartimento
-  - direttore_dipartimento
-  - budget
+  - id                              | BIGINT
+  - nome_dipartimento               | VARCHAR(50)
+  - descrizione_dipartimento        | LONGTEXT
+  - direttore_dipartimento          | VARCHAR(100)
+  - budget                          | DECIMAL(7,2)
 
  ### corsi_laurea
-  - id
-  - nome_corso_laurea
-  - descrizione_corso_laurea
-  - presidente_corso_laurea
+  - id                              | BIGINT
+  - nome_corso_laurea               | VARCHAR(50)
+  - descrizione_corso_laurea        | MEDIUMTEXT
+  - presidente_corso_laurea         | VARCHAR(100)
   - id_dipartimento
 
  ### materie
-  - id
-  - name_materia
-  - programma
-  - preside
-  - testo_riferimento
+  - id                              | BIGINT
+  - name_materia                    | VARCHAR(50)
+  - programma                       | TEXT
+  - preside                         | VARCHAR(100)
+  - testo_riferimento               | VARCHAR(50)
   - id_corso_laurea
  
  ### professori
-  - id
-  - name
-  - cognome
-  - anni_insegnamento
-  - ruolo (docente assistente)
+  - id                              | BIGINT
+  - name                            | VARCHAR(50)
+  - cognome                         | VARCHAR(50)
+  - anni_insegnamento               | TINYINT
+  - ruolo                           | TINYINT (1 professore, 2 assistente, 3 dottorando, etc)
   - id_materia
 
  ### appelli_esame
-  - id
-  - data
-  - ora
-  - aula
+  - id                              | BIGINT
+  - data                            | DATE (YYYY-MM-GG)
+  - ora                             | TIME (HH:MM:SS)
+  - aula                            | VARCHAR(50)
   - id_voto
 
 
  ### studenti
-  - id
-  - nome
-  - cognome
+  - id                              | BIGINT
+  - nome                            | VARCHAR(50)
+  - cognome                         | VARCHAR(50)
   - id_corso_laurea
   - id_voto
 
  ### voti
-  - id
-  - voto
+  - id                              | BIGINT
+  - voto                            | TINYINT (fino a 30 e la lode 31)
 
  ## Talelle Pivot
 
