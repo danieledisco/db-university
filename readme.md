@@ -51,17 +51,41 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
   - data
   - ora
   - aula
-  - id_materia
+  - id_voto
+
 
  ### studenti
   - id
   - nome
   - cognome
   - id_corso_laurea
-  - id_appello_esame
+  - id_voto
 
  ### voti
   - id
+  - voto
+
+ ## Talelle Pivot
+
+ ### studente_materia
+  - id
+  - id_studente
+  - id_materia
+
+ ### stdente_appello_esame
+  - id
   - id_studente
   - id_appello_esame
-  - voto
+
+
+## Connessioni tra varie tabelle
+ 0. Il fatto di inserire su di un singolo collegamento il rombo con la scritta "Relationship" non aggiunge chiarezza (il collegamento basta) e peggiora  la visualizzazione in pagina   
+ 1. Ogni dipartimento ha più corso di laurea ma ogni corso di laurea non ha più dipartiemnti ==> 1 to Many
+ 2. Ogni corso di laurea ha più studenti ma uno studente non ha più corso di laurea ==> 1 to Many
+ 3. Ogni corso di laurea ha più materie ma ogni materia non ha più corso di laurea ==> 1 to Many
+    * Questo generalizzando le categorie (p.es Analisi 1 c'è per Ingegneria ma non c'è per Filosofia ma Ing. Civile ed Ing. ELettronica hanno Analisi 1)
+ 4. Ogni materia può avere più professori ma ogni professore non può avere più materie ==> 1 to Many
+ 5. Ogni studente può avere più studenti ma ogni materia può avere più studenti ==> Many to Many
+ 6. Ogni appello d'esame può avere più studenti ma ogni studente può avere più appelli ==> Many to Many
+ 7. Ogni singolo voto si riferisce ad un singolo studente ==> 1 to 1
+ 8. Ogni singolo voto si riferisce ad un singolo appello ==> 1 to 1
